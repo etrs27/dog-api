@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <title>Dog Search</title>
+    </head>
+    <body>
+        <main>
+            <h1>Dog Search</h1>
+            <form>
+                <label for="breed">Enter a type of dog breed:</label> 
+                <input id="breed" type="text" name="breed" minlength="3" autofocus required>
+                <input type="submit" value="Submit">  
+            </form>
+
+            <div class="dog-image"></div>
+
+            <div id="error-container"></div>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous">
+        </script>
+        <script src="index.js"></script>
+    </body>
+</html>
