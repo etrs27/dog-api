@@ -9,12 +9,13 @@
     <body>
         <main>
             <h1>Dog Search</h1>
-            <form>
+            <form id="form-container">
                 <label for="breed">Enter a type of dog breed:</label> 
                 <input id="breed" type="text" name="breed" minlength="3" autofocus required>
-                <input type="submit" value="Submit">  
+                <input type="submit" id="submit" value="Submit">  
             </form>
 
+            <h3 id="breed-type"></h3>
             <div class="dog-image"></div>
 
             <div class="error-container"></div>
