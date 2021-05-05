@@ -1,7 +1,7 @@
 const getDogImages = (breed) => {
-    let subBreed = breed.split(/(\s+)/);
-    let breedOf = subBreed[0];
-    let sub = subBreed[2];
+    let breedType = breed.split(/(\s+)/);
+    let breedOf = breedType[0];
+    let sub = breedType[2];
 
     if (sub === undefined){
         link = `https://dog.ceo/api/breed/${breedOf}/images/random/5`

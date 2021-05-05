@@ -3,12 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="main.scss" type="text/x-scss">
+        <link rel="stylesheet" href="main.css" type="text/css">
         <title>Dog Search</title>
     </head>
     <body>
         <main>
             <h1>Dog Search</h1>
+
+            <div class="paw-print">
+                <div class="pad large"></div>
+                <div class="pad small-1"></div>
+                <div class="pad small-2"></div>
+                <div class="pad small-3"></div>
+                <div class="pad small-4"></div>
+            </div>
+
             <form id="form-container">
                 <label for="breed">Enter a type of dog breed:</label> 
                 <input id="breed" type="text" name="breed" minlength="3" autofocus required>
@@ -16,6 +25,7 @@
             </form>
 
             <h3 id="breed-type"></h3>
+
             <div class="dog-image"></div>
 
             <div class="error-container"></div>
