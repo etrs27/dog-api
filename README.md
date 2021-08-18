@@ -8,3 +8,5 @@ You can search for breed or sub breed. Sub breed must be typed first.
 e.g. Great Dane. Great is the sub breed and Dane is the breed.
 Another example is French Bulldog. French is the sub breed and Bulldog is the breed.
 Or you can just search the breed. e.g. Dane or Bulldog.
+
+You can visit the webpage by clicking on the link: <a href="https://etrs27.github.io/dog-api/">Dog Search</a>
