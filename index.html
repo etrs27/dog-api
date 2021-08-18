@@ -8,7 +8,15 @@
     </head>
     <body>
         <main>
-            <h1>Dog Search</h1>
+            <h1>
+                <a href="index.html">Dog Search</a>            
+            </h1>
+
+            <form id="form-container">
+                <label for="breed">Enter a type of dog breed:</label> 
+                <input id="breed" type="text" name="breed" minlength="3" autofocus required>
+                <input type="submit" id="submit" value="Submit">  
+            </form>
 
             <div class="paw-print">
                 <div class="pad large"></div>
@@ -18,18 +26,14 @@
                 <div class="pad small-4"></div>
             </div>
 
-            <form id="form-container">
-                <label for="breed">Enter a type of dog breed:</label> 
-                <input id="breed" type="text" name="breed" minlength="3" autofocus required>
-                <input type="submit" id="submit" value="Submit">  
-            </form>
-
-            <h3 id="breed-type"></h3>
-
-            <div class="dog-image"></div>
+            <figure>
+                <figcaption id="breed-type"></figcaption>
+                <ul class="dog-image-list"></ul>
+            </figure>
 
             <div class="error-container"></div>
         </main>
+
         <script src="https://code.jquery.com/jquery-3.5.1.js"
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
             crossorigin="anonymous">

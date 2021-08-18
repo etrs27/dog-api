@@ -1,12 +1,15 @@
 const getDogImages = (breed) => {
-    let breedType = breed.split(/(\s+)/);
-    let breedOf = breedType[0];
-    let sub = breedType[2];
+    const breedType = breed.split(/(\s+)/);
 
-    if (sub === undefined){
+    if (breedType.length === 1){
+        let breedOf = breedType[0];
+
         link = `https://dog.ceo/api/breed/${breedOf}/images/random/5`
     }
     else {
+        let breedOf = breedType[2];
+        let sub = breedType[0];
+
         link = `https://dog.ceo/api/breed/${breedOf}/${sub}/images/random/5`
     }
 
@@ -25,13 +28,14 @@ const displayDogs = (responseJson) => {
             $('.error-container').prepend(`${breed} is not a breed of a dog. Please try again.`);
         }
         else {
-            $('.dog-image').append(
-                `<img src=${responseJson.message[i]} alt="Picture of a ${breed} dog">`
+            $('.paw-print').empty();
+            $('#breed-type').empty().prepend(`${breed}`.toUpperCase());
+            $('.dog-image-list').append(
+                `<li><img src=${responseJson.message[i]} alt="A picture of a ${breed} dog"></li>`
             )
         }
     }
     
-    $('#breed-type').empty().prepend(`${breed}`.toUpperCase());
     $('#form-container').children('input:not(#submit)').val('');
 }
 
@@ -39,11 +43,11 @@ const getBreed = () => {
     $('main').on('submit', event => {
         event.preventDefault();
         
-        let breed = $('#breed').val();
+        let breed = $('#breed').val().toLowerCase();
         const letters = /^[a-z][a-z\s]*$/;
-        const clearField = $('.dog-image').empty() && $('.error-container').empty() && $('#breed-type').empty();
+        const clearField = $('.dog-image-list').empty() && $('.error-container').empty() && $('#breed-type').empty();
 
-        if (breed.match(letters)) {
+        if (breed.match(letters)){
             getDogImages(breed);
             clearField;
         }
